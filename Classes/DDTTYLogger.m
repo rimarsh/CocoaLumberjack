@@ -1174,7 +1174,7 @@ static DDTTYLogger *sharedInstance;
                 for (DDTTYLoggerColorProfile *cp in _colorProfilesArray) {
                     if (logMessage->_flag & cp->mask) {
                         // Color profile set for this context?
-                        if (logMessage->_context == cp->context) {
+                        if (logMessage->_context == (NSUInteger)cp->context) {
                             colorProfile = cp;
 
                             // Stop searching
